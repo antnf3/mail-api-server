@@ -1,6 +1,6 @@
 import http from "http";
 import debug from "debug";
-import App from "..";
+import App from "../src";
 debug("mail-api-server:server");
 
 const port = normalizePort(process.env.PORT || "3000");
