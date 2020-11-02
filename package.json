@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node dist/www.js",
-    "prestart": "rm -v -rf dist && parcel build bin/www.ts -d dist --target node  && mv -i -v src/public dist/ && mv -i -v src/views dist/ && rm -v -rf src",
+    "postinstall": "rm -v -rf dist && parcel build bin/www.ts -d dist --target node  && mv -i -v src/public dist/ && mv -i -v src/views dist/ && rm -v -rf src",
     "dev:watch": "nodemon --watch src --delay 1 --exec ts-node bin/www.ts"
   },
   "dependencies": {
